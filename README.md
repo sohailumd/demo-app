@@ -1,15 +1,15 @@
-# cicd-pipeline-train-schedule-jenkins
+# cicd-pipeline-train-schedule-gradle
 
 This is a simple train schedule app written using nodejs. It is intended to be used as a sample application for a series of hands-on learning activities.
 
 ## Running the app
 
-You need a Java JDK 7 or later to run the build. You can run the build like this:
+It is not necessary to run this app locally in order to complete the learning activities, but if you wish to do so you will need a local installation of npm. Begin by installing the npm dependencies with:
 
-    ./gradlew build
+    npm install
 
-You can run the app with:
+Then, you can run the app with:
 
-    ./gradlew npm_start
+    npm start
 
 Once it is running, you can access it in a browser at [http://localhost:3000](http://localhost:3000)
