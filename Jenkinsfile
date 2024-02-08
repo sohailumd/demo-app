@@ -4,6 +4,12 @@ pipeline {
         stage('Build') {
             steps {
                 sh ' pwd; ls -l; sudo rm -rf dist; ls -l; chmod +x gradlew'
+                    checkout([$class: 'GitSCM', 
+                              branches: [[name: 'main']], 
+                              doGenerateSubmoduleConfigurations: false, 
+                              extensions: [], 
+                              userRemoteConfigs: [[url: 'git@github.com:sohailumd/demo-app.git']]])
+                sh ' pwd; cd demo-app; ls -l; chmod +x gradlew'
                 echo 'Running build automation'
                 sh 'sudo ./gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
