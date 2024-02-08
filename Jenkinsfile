@@ -29,7 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: 'sudo killall node; ps aux | grep node'
+                                        execCommand: 'killall node'
                                     )
                                 ]
                             )
