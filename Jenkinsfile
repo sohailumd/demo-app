@@ -9,9 +9,6 @@ pipeline {
             }
         }
         stage('deploy-app') {
-            when {
-                branch 'main'
-            }
             steps {
                 withCredentials([usernamePassword(credentialsId: 'demo-app-server', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
                     sshPublisher(
