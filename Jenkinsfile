@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh ' pwd; ls -l; cat Jenkinsfile; cd dist; ls -l; chmod +x gradlew'
+                sh ' pwd; ls -l; rm -rf dist; ls -l; chmod +x gradlew'
                 echo 'Running build automation'
                 sh 'sudo ./gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
