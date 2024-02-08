@@ -29,7 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: 'killall node'
+                                        execCommand: 'killall node; rm -rf /home/demouser/demo-app/* '
                                     )
                                 ]
                             )
