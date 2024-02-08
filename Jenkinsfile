@@ -11,7 +11,7 @@ pipeline {
         }
         stage('deploy-app') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'demo-app-server', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
+                script {
                     sshPublisher(
                         failOnError: true,
                         continueOnError: false,
