@@ -19,8 +19,8 @@ pipeline {
                             sshPublisherDesc(
                                 configName: 'demo-app-server',
                                 sshCredentials: [
-                                    username: "$USERNAME",
-                                    encryptedPassphrase: "$USERPASS"
+                                    username: "${USERNAME}",
+                                    encryptedPassphrase: "${USERPASS}"
                                 ], 
                                 transfers: [
                                     sshTransfer(
