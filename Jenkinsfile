@@ -23,7 +23,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: 'rm /home/demouser/demo-app/dist/trainSchedule.zip && mv /tmp/trainSchedule.zip /home/demouser/demo-app/dist/ && ls -l /home/demouser/demo-app/dist/trainSchedule.zip'
+                                        execCommand: 'rm /home/demouser/demo-app/dist/trainSchedule.zip && mv /tmp/trainSchedule.zip /home/demouser/demo-app/dist && ls -l /home/demouser/demo-app/dist/trainSchedule.zip'
                                     )
                                 ]
                             )
