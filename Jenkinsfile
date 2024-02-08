@@ -29,7 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: 'sudo killall node; mv /tmp/trainSchedule.zip /home/demouser/demo-app/dist/trainSchedule.zip; sudo ./gradlew npm_start'
+                                        execCommand: 'sudo killall node; rm -rf /home/demouser/demo-app/* && unzip /tmp/trainSchedule.zip -d /home/demouser/demo-app; sudo ./gradlew npm_start'
                                     )
                                 ]
                             )
